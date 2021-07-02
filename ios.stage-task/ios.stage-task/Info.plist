@@ -60,5 +60,11 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string></string>
+	</array>
+	<key>Item 0</key>
+	<string>SF-Pro-Text-Bold.otf</string>
 </dict>
 </plist>

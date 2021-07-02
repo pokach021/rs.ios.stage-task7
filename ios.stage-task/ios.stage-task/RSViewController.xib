@@ -4,11 +4,24 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RSViewController">
             <connections>
+                <outlet property="autorizeButton" destination="nsg-GC-seD" id="3uj-1C-vXS"/>
+                <outlet property="loginTextField" destination="jIQ-q0-kyO" id="IvU-Fi-x5S"/>
+                <outlet property="passwordTextField" destination="UOb-jL-mte" id="b8W-yd-z1f"/>
+                <outlet property="verificationView" destination="sY2-ne-IPa" id="UW3-cR-25b"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,42 +31,57 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSSchool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0n-u4-kbP">
-                    <rect key="frame" x="101" y="124" width="151" height="48.5"/>
-                    <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="36"/>
+                    <rect key="frame" x="101" y="124" width="173" height="43"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="36"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jIQ-q0-kyO">
-                    <rect key="frame" x="36" y="252.5" width="281" height="34"/>
+                    <rect key="frame" x="36" y="247" width="303" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="303" id="ke9-xU-GLi"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardAppearance="light" textContentType="username"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UOb-jL-mte">
-                    <rect key="frame" x="36" y="316.5" width="281" height="34"/>
+                    <rect key="frame" x="36" y="311" width="303" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsg-GC-seD">
-                    <rect key="frame" x="110" y="410.5" width="133" height="42"/>
+                    <rect key="frame" x="110" y="405" width="155" height="42"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="156" id="71D-IU-j9w"/>
                         <constraint firstAttribute="height" constant="42" id="IpV-rs-f05"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
+                    <state key="normal" title="Authorize">
+                        <color key="titleColor" red="0.50196078431372548" green="0.64313725490196072" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sY2-ne-IPa">
+                    <rect key="frame" x="69.5" y="514" width="236" height="110"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="236" id="3xN-Q3-GRs"/>
+                        <constraint firstAttribute="height" constant="110" id="TVO-gl-h5E"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="sY2-ne-IPa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3eo-r1-meA"/>
                 <constraint firstItem="p0n-u4-kbP" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="101" id="8H5-7e-ZgJ"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="nsg-GC-seD" secondAttribute="trailing" constant="110" id="K99-FR-Ffa"/>
                 <constraint firstItem="nsg-GC-seD" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="110" id="O0n-b4-Eqh"/>
+                <constraint firstItem="sY2-ne-IPa" firstAttribute="top" secondItem="nsg-GC-seD" secondAttribute="bottom" constant="67" id="QGb-g4-g1w"/>
                 <constraint firstItem="UOb-jL-mte" firstAttribute="leading" secondItem="jIQ-q0-kyO" secondAttribute="leading" id="Rwd-Ro-h7G"/>
                 <constraint firstItem="UOb-jL-mte" firstAttribute="top" secondItem="jIQ-q0-kyO" secondAttribute="bottom" constant="30" id="SzN-7l-qdn"/>
                 <constraint firstItem="jIQ-q0-kyO" firstAttribute="top" secondItem="p0n-u4-kbP" secondAttribute="bottom" constant="80" id="XWG-X2-Cpm"/>
+                <constraint firstItem="sY2-ne-IPa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zpj-Yz-oJZ"/>
                 <constraint firstItem="p0n-u4-kbP" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="80" id="Zti-ax-lmf"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="jIQ-q0-kyO" secondAttribute="trailing" constant="36" id="kX1-47-UMR"/>
                 <constraint firstItem="jIQ-q0-kyO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="36" id="qOh-jO-4Xs"/>
@@ -64,4 +92,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
