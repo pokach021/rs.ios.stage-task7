@@ -11,8 +11,8 @@
         <array key="SF-Pro-Text-Bold.otf">
             <string>SFProText-Bold</string>
         </array>
-        <array key="SF-Pro-Text-Regular.otf">
-            <string>SFProText-Regular</string>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
         </array>
     </customFonts>
     <objects>
@@ -50,15 +50,16 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsg-GC-seD">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsg-GC-seD">
                     <rect key="frame" x="110" y="405" width="155" height="42"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="156" id="71D-IU-j9w"/>
                         <constraint firstAttribute="height" constant="42" id="IpV-rs-f05"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
-                    <state key="normal" title="Authorize">
-                        <color key="titleColor" red="0.50196078431372548" green="0.64313725490196072" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="20"/>
+                    <state key="normal" title=" Authorize">
+                        <color key="titleColor" red="0.50196078430000002" green="0.64313725489999995" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sY2-ne-IPa">
@@ -73,7 +74,6 @@
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="sY2-ne-IPa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3eo-r1-meA"/>
                 <constraint firstItem="p0n-u4-kbP" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="101" id="8H5-7e-ZgJ"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="nsg-GC-seD" secondAttribute="trailing" constant="110" id="K99-FR-Ffa"/>
                 <constraint firstItem="nsg-GC-seD" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="110" id="O0n-b4-Eqh"/>
@@ -81,8 +81,8 @@
                 <constraint firstItem="UOb-jL-mte" firstAttribute="leading" secondItem="jIQ-q0-kyO" secondAttribute="leading" id="Rwd-Ro-h7G"/>
                 <constraint firstItem="UOb-jL-mte" firstAttribute="top" secondItem="jIQ-q0-kyO" secondAttribute="bottom" constant="30" id="SzN-7l-qdn"/>
                 <constraint firstItem="jIQ-q0-kyO" firstAttribute="top" secondItem="p0n-u4-kbP" secondAttribute="bottom" constant="80" id="XWG-X2-Cpm"/>
-                <constraint firstItem="sY2-ne-IPa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zpj-Yz-oJZ"/>
                 <constraint firstItem="p0n-u4-kbP" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="80" id="Zti-ax-lmf"/>
+                <constraint firstItem="sY2-ne-IPa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dPo-PJ-ktm"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="jIQ-q0-kyO" secondAttribute="trailing" constant="36" id="kX1-47-UMR"/>
                 <constraint firstItem="jIQ-q0-kyO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="36" id="qOh-jO-4Xs"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="p0n-u4-kbP" secondAttribute="trailing" constant="101" id="sJz-H0-3uV"/>
